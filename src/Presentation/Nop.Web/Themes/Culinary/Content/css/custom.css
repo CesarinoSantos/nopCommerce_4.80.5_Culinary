@@ -1,0 +1,143 @@
+/* ==== Culinary Recipe Theme – custom.css ==== */
+
+:root {
+    --primary-color: #D94F30;        /* Warm Tomato Red */
+    --secondary-color: #738678;      /* Olive Green */
+    --accent-color: #FFC857;         /* Golden Honey */
+    --background-color: #FFF8F0;     /* Creamy White */
+    --text-color: #3A3A3A;           /* Charcoal Brown */
+    --muted-text-color: #666666;
+    --light-border: #EADAC1;
+}
+
+/* ========== Global ========== */
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========== Typography ========== */
+
+a {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* ========== Buttons ========== */
+
+.btn,
+.button-1 {
+    background-color: var(--primary-color);
+    border: none;
+    color: white !important;
+    padding: 0.5em 1.2em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.button-1:hover {
+    background-color: #c44227;
+}
+
+/* ========== Header ========== */
+
+.header {
+    background-color: var(--primary-color);
+}
+
+.header a,
+.header-menu a {
+    color: white;
+}
+
+.header a:hover {
+    color: var(--accent-color);
+}
+
+/* ========== Footer ========== */
+
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.footer a {
+    color: var(--accent-color);
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* ========== Product Boxes ========== */
+
+.product-item {
+    background-color: white;
+    border: 1px solid var(--light-border);
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Price and Labels ========== */
+
+.product-item .prices,
+.product-item .product-title {
+    color: var(--primary-color);
+}
+
+.product-item .add-to-cart-button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+}
+
+.product-item .add-to-cart-button:hover {
+    background-color: #e6b643;
+}
+
+/* ========== Misc ========== */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    border: 1px solid var(--light-border);
+    border-radius: 4px;
+    padding: 0.5em;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(217, 79, 48, 0.2);
+}
+
+/* ========== Responsive Tweaks ========== */
+
+@media (max-width: 768px) {
+    .product-item {
+        margin-bottom: 1em;
+    }
+
+    .header {
+        text-align: center;
+    }
+}
